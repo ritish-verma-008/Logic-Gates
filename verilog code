@@ -1,0 +1,14 @@
+module logic_gates(a,b,seg,D1_AN);
+input a,b;
+wire y;
+output reg [6:0] seg;
+output [3:0] D1_AN;
+assign D1_AN = 4'b1110;
+
+always@(*) begin
+    case(y)
+        1'd0: seg = 7'b1000000;
+        1'd1: seg = 7'b1111001;
+    endcase
+    end
+endmodule
